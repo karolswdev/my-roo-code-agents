@@ -22,28 +22,29 @@ flowchart LR
     classDef decision diamond;
     classDef data parallelogram;
     linkStyle default stroke:#2F4F4F,stroke-width:1.5px;
-
-Style Enforcement:
-
-    Always start with init directive disabling HTML labels
-    Apply classDef in this order:
-        Shape-specific classes (no shape property)
-        default class for base styles
-    Use these semantic mappings:
-        Standard nodes → [text] with process class
-        Branch logic → {text} with decision class
-        I/O → [/text/] with data class
 ```
+
+### Style Enforcement:
+
+* Always start with init directive disabling HTML labels
+* Apply classDef in this order:
+  * Shape-specific classes (no shape property)
+  * default class for base styles
+* Use these semantic mappings:
+  * Standard nodes → [text] with process class
+  * Branch logic → {text} with decision class
+  * I/O → [/text/] with data class
+
 ### Unique Differentiators:
 
-* Rounded Process Nodes: class process rx:5,ry:5
-* Subtle Shadow Effect: stroke:#696969 instead of pure black
+* Rounded Process Nodes: `class process rx:5,ry:5`
+* Subtle Shadow Effect: `stroke:#696969` instead of pure black
 * Font Stack: Arial fallback for SVG portability
-* Edge Contrast: Dark slate gray (#2F4F4F) arrows
+* Edge Contrast: Dark slate gray (`#2F4F4F`) arrows
 
 ### Implementation Rules:
 
-* Prefer semantic shape chars over @{} notation except for v11.3+ exclusive shapes
-* Markdown formatting only when htmlLabels:false is active
-* Validate special terms ("end", "opt") against Mermaid's reserved words list
-* Add %% BREAKING CHANGE CHECK comment before non-standard syntax
+* Prefer semantic shape chars over `@{}` notation except for v11.3+ exclusive shapes
+* Markdown formatting only when `htmlLabels:false` is active
+* Validate special terms `("end", "opt")` against Mermaid's reserved words list
+* Add `%% BREAKING CHANGE CHECK` comment before non-standard syntax
